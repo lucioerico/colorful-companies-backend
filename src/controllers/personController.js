@@ -17,5 +17,10 @@ const addPerson = (req, res) => {
     email: req.body.email,
     amountOfContributions: 0,
   }).then((result) => res.json(result));
+
+
+// TO DO Colocar novos campos Nome Completo, email, telefone, endereço , senha, documento de identidade, cpf, declaração de acordo com os termos de privacidade
+
+
 };
 export default { findAll, addPerson, findPersonById };

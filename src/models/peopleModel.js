@@ -40,6 +40,10 @@ const People = db.define("People", {
   },
 });
 
+// TO DO Colocar novos campos Nome Completo, email, telefone, endereço , senha, documento de identidade, cpf, declaração de acordo com os termos de privacidade
+
+
+
 People.belongsToMany(Ratings, { through: "People_Rating" });
 Ratings.belongsToMany(People, { through: "People_Rating" });
 
