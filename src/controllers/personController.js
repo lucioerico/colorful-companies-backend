@@ -20,10 +20,10 @@ const addPerson = (req, res) => {
     cpf: req.body.cpf,
     email: req.body.email,
     city: req.body.city,
-    address: req.body.adress,
+    address: req.body.address,
     password: req.body.password,
-    declarationPrivacy: req.body.declarationPrivacy,
-    amountOfContributions: 0,
+/*     declarationPrivacy: req.body.declarationPrivacy,
+ */    amountOfContributions: 0,
   }).then((result) => res.json(result));
 
 };
