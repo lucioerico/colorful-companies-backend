@@ -20,7 +20,7 @@ const addPerson = (req, res) => {
     cpf: req.body.cpf,
     email: req.body.email,
     city: req.body.city,
-    adress: req.body.adress,
+    address: req.body.adress,
     password: req.body.password,
     declarationPrivacy: req.body.declarationPrivacy,
     amountOfContributions: 0,

@@ -11,39 +11,14 @@ const sequelize = new Sequelize(dbName, dbUsername, dbPassword, {
   host: dbHost,
 });
 
-const People = sequelize.define("People", {
-  name: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  cpf: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  email: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  city: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  address: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  password: {
-    type: Sequelize.STRING,
-    allowNull: false
-  },
-  declarationPrivacy: {
-    type: Sequelize.BOOLEAN,
-    allowNull: false
-  },
-  amountOfContributions: {
-    type: Sequelize.INTEGER,
-    allowNull: false
-  }
-});
+// Adicionando as colunas 'city', 'address', 'password' e 'declarationPrivacy' à tabela 'People'
+/* sequelize.query(`
+  ALTER TABLE "People"
+  ADD COLUMN city VARCHAR(100),
+  ADD COLUMN address VARCHAR(100),
+  ADD COLUMN password VARCHAR(100),
+  ADD COLUMN declarationPrivacy BOOLEAN;
+`); */
+
 
 export default sequelize;
