@@ -16,6 +16,22 @@ const People = db.define("People", {
     type: Sequelize.TEXT,
     allowNull: false,
   },
+  city: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+  },
+  adress: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+  },
+  password: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+  },
+  declarationPrivacy: {
+    type: Sequelize.BOOLEAN,
+    allowNull: false,
+  },
   email: {
     type: Sequelize.TEXT,
     allowNull: false,
@@ -39,10 +55,6 @@ const People = db.define("People", {
     allowNull: true,
   },
 });
-
-// TO DO Colocar novos campos Nome Completo, email, telefone, endereço , senha, documento de identidade, cpf, declaração de acordo com os termos de privacidade
-
-
 
 People.belongsToMany(Ratings, { through: "People_Rating" });
 Ratings.belongsToMany(People, { through: "People_Rating" });

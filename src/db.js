@@ -11,4 +11,39 @@ const sequelize = new Sequelize(dbName, dbUsername, dbPassword, {
   host: dbHost,
 });
 
+const People = sequelize.define("People", {
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  cpf: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  city: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  address: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  password: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  declarationPrivacy: {
+    type: Sequelize.BOOLEAN,
+    allowNull: false
+  },
+  amountOfContributions: {
+    type: Sequelize.INTEGER,
+    allowNull: false
+  }
+});
+
 export default sequelize;
