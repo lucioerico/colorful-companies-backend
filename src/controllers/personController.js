@@ -22,8 +22,7 @@ const addPerson = (req, res) => {
     city: req.body.city,
     address: req.body.address,
     password: req.body.password,
-/*     declarationPrivacy: req.body.declarationPrivacy,
- */    amountOfContributions: 0,
+    amountOfContributions: 0,
   }).then((result) => res.json(result));
 
 };

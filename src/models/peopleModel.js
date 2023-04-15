@@ -27,11 +27,7 @@ const People = db.define("People", {
   password: {
     type: Sequelize.TEXT,
     allowNull: false,
-  }/* ,
-  declarationPrivacy: {
-    type: Sequelize.BOOLEAN,
-    allowNull: false,
-  } */,
+  },
   email: {
     type: Sequelize.TEXT,
     allowNull: false,
