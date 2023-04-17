@@ -11,4 +11,14 @@ const sequelize = new Sequelize(dbName, dbUsername, dbPassword, {
   host: dbHost,
 });
 
+// Adicionando as colunas 'city', 'address', 'password' e 'declarationPrivacy' à tabela 'People'
+/* sequelize.query(`
+  ALTER TABLE "People"
+  ADD COLUMN city VARCHAR(100),
+  ADD COLUMN address VARCHAR(100),
+  ADD COLUMN password VARCHAR(100),
+  ADD COLUMN declarationPrivacy BOOLEAN;
+`); */
+
+
 export default sequelize;
