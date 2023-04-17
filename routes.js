@@ -8,6 +8,7 @@ const routes = express.Router();
 routes.post("/addPerson", people.addPerson);
 routes.get("/people", people.findAll);
 routes.get("/personById/:id", people.findPersonById);
+routes.post("/findLogin", people.findLogin);
 
 routes.post("/addOrganization", organization.addOrganization);
 routes.get("/organizations", organization.findAll);
